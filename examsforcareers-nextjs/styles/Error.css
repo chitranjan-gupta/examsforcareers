@@ -1,0 +1,97 @@
+.erro-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 250px;
+}
+.erro-home.NotFound {
+  padding: 150px !important;
+}
+.erro-home::before {
+  position: absolute;
+  content: "404";
+  font-size: 300px;
+  z-index: 1;
+  color: navajowhite;
+}
+
+.erro-home.ERROR500::before {
+  content: "500" !important;
+}
+
+.erro-home h1,
+span {
+  color: black;
+  text-align: center;
+  z-index: 2;
+}
+
+.erro-home span {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.erro-home h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.erro-home button {
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  color: white;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.erro-home div {
+  width: 240px;
+  height: 50px;
+  background-color: #2196f3;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.erro-home div:hover {
+  background-color: #e6e9ef;
+}
+
+.erro-home div:hover > button {
+  color: black;
+  cursor: pointer;
+}
+
+@media all and (orientation: portrait) {
+  .erro-home {
+    padding: 50px;
+  }
+  .erro-home.NotFound {
+    padding: 50px !important;
+    padding-bottom: 100px !important;
+  }
+  .erro-home.ERROR500 {
+    padding-top: 100px;
+  }
+  .erro-home.NotFound::before {
+    transform: rotate(0deg) !important;
+    font-size: 190px;
+    margin-top: 0;
+  }
+  .erro-home::before {
+    transform: rotate(90deg);
+    margin-top: 100px;
+    font-size: 280px;
+    color: navajowhite;
+  }
+  .erro-home h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+}

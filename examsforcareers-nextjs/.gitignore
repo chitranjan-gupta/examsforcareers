@@ -1,0 +1,13 @@
+/node_modules
+/.pnp
+.pnp.js
+config.env
+package-lock.json
+.vscode
+/.git
+# next.js
+/.next/
+/out/
+
+# production
+/build
